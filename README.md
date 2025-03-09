@@ -1,10 +1,10 @@
 
 <div align="center">
-<img width="200" src="https://github.com/user-attachments/assets/f9a25afb-2503-421a-bed0-6e94f2ab43db" />
+<img width="200" src="https://github.com/zen-browser/branding/blob/4b99730c9d3c8fe3ec71d31a07e74cfd488fc27f/Official/PNG/Zen-Light-Coral.png" />
 </div>
-<h1 align="center" style="font-size: 2.5em;">Arc 2.0</h1>
+<h1 align="center" style="font-size: 2.5em;">"Arc" 2.1</h1>
 
-<p align="center">Arc which receives non-chromium updates every 1-2 weeks! (iykyk).</p>
+<p align="center">A altered version @YashjitPal's Arc-2.0 theme for the Zen browser that better supports light and dark modes on MacOS. </p>
 
 <div align="center">
     <a href="https://zen-browser.app/">
@@ -12,22 +12,8 @@
     </a>
 </div>
 
-##
-![image](https://github.com/user-attachments/assets/7dfce5ab-85d2-460b-b30e-3097e3a61a63)
+### Below are some sections from the original README that you might find helpful. I also include some notes of things I did differently. 
 
-## What is Arc 2.0?
-Arc 2.0 Browser is a skin made for Zen Browser that adds lots of polish to the design by incorporating animations, blurs and more. It's pretty much the skin I personally use, but made public because people wanted the CSS. This skin is inspired by Arc browser and some other Zen skins (listed in credits)
-
-Arc 2.0 is NOT a standalone browser. I don't even intend on making one.
-
-Arc 2.0 has been tested on 1.8.2b (Beta) on Windows. Note: It is not tested on Mac.
-
-### Features are listed below!
-### ℹ️ Note
-
-> Please remember that Arc 2.0 in the end is my personal browser skin. If you don't like a design choice I've
-> made, chances are I'll keep it if I still like it. So please be respectful and refrain from attacking people when you
-> make suggestions. Thanks!
 
 ## How to use? (Full video tutorial given below)
 Install the ZIP file from Releases. Extract it, then copy and paste the files of the ZIP file in the chrome folder. 
@@ -85,7 +71,7 @@ https://github.com/user-attachments/assets/98e35d8f-5638-4791-8369-8ff964ad94df
   
 
 ## Extensions required:
-* ### Zen Internet (for transparent websites):
+* ### (I personally didn't use this extention) Zen Internet (for transparent websites):
  
   Link - https://addons.mozilla.org/en-US/firefox/addon/zen-internet/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
 * ### Copy Frame or Page URL
@@ -116,7 +102,8 @@ Press Ctrl+T and open the floating URL bar and type "about:config". Press the ti
   ![image](https://github.com/user-attachments/assets/34f1d947-33b0-4370-a717-fc354d4f9830)
 * ### Better PDF viewer:
   ![image](https://github.com/user-attachments/assets/d8c85853-6c49-4d66-8a36-01fbe60b88f8)
-* ### Better PiP:
+* ### (I also disabled this feature and use the Pimp your PiP Mod instead) Better PiP:
+  Link - https://zen-browser.app/mods/599a1599-e6ab-4749-ab22-de533860de2c/
   ![Screenshot 2025-03-01 190128](https://github.com/user-attachments/assets/8e7303c0-4a1a-4ff5-8497-c34c5b06440b)
 * ### Animations
 

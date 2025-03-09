@@ -14,9 +14,14 @@
       }
 
       --natsumi-glass-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
-      --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, light-dark(black, white));
-      --toolbarbutton-hover-background: color-mix(in srgb, light-dark(#1d1d1d, #ebebeb) 10%, transparent 90%);
-      --toolbarbutton-active-background: light-dark(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0.11));
+      --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, black);
+      --toolbarbutton-hover-background: color-mix(in srgb, #1d1d1d 10%, transparent 90%);
+      --toolbarbutton-active-background: rgba(0, 0, 0, 0.07);
+
+      @media (prefers-color-scheme: light) {
+        --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent 90%);
+        --toolbarbutton-active-background: rgba(255, 255, 255, 0.11);
+      }
 
       @media (-moz-bool-pref: "natsumi.theme.force-dark-shadows") {
         --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, black);
@@ -127,7 +132,7 @@
         opacity: 0 !important;
         bottom: -5px !important;
         background-color: var(--natsumi-glass-background) !important;
-        border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
+        border: 1px solid rgba(20, 20, 20, 0.2) !important;
         border-radius: 10px !important;
         padding: 10px 15px !important;
         margin: 0 5px !important;
@@ -144,7 +149,11 @@
           /*noinspection CssInvalidFunction*/
           #timestamp {
             font-size: 12px !important;
-            color: light-dark(black, white) !important;
+            color: black !important;
+
+            @media (prefers-color-scheme: dark) {
+              color: white !important;
+            }
           }
         }
 
@@ -162,7 +171,11 @@
 
           /*noinspection CssInvalidFunction*/
           &::-moz-range-track {
-            background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
+            background-color: rgba(0, 0, 0, 0.1) !important;
+
+            @media (prefers-color-scheme: dark) {
+              background-color: rgba(255, 255, 255, 0.1) !important;
+            }
           }
 
           &::-moz-range-thumb {
@@ -200,7 +213,11 @@
           border-radius: 6px !important;
           transition: background-color 0.2s ease !important;
           -moz-context-properties: fill;
-          fill: light-dark(black, white) !important;
+          fill: black !important;
+
+          @media (prefers-color-scheme: dark) {
+            fill: white !important;
+          }
 
           &[disabled] {
             cursor: default !important;
@@ -300,30 +317,51 @@
         /*noinspection CssInvalidFunction*/
         label, legend {
           font-family: system-ui !important;
-          color: light-dark(black, white) !important;
+          color: black !important;
+
+          @media (prefers-color-scheme: dark) {
+            color: white !important;
+          }
         }
 
         /*noinspection CssInvalidFunction*/
         .slider {
           background-color: rgba(0, 0, 0, 0.07) !important;
-          outline: 1px solid light-dark(#8f8f9d, #bfbfc9) !important;
+          outline: 1px solid #8f8f9d !important;
+
+          @media (prefers-color-scheme: dark) {
+            outline: 1px solid #bfbfc9 !important;
+          }
 
           /*noinspection CssInvalidFunction*/
           &::before {
-            background-color: light-dark(#8f8f9d, #bfbfc9) !important;
+            background-color: #8f8f9d !important;
+
+            @media (prefers-color-scheme: dark) {
+              background-color: #bfbfc9 !important;
+            }
           }
         }
 
         input {
           /*noinspection CssInvalidFunction*/
           &:checked {
-            border-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            border-color: var(--natsumi-colors-primary) !important;
+
+            @media (prefers-color-scheme: dark) {
+              border-color: var(--natsumi-primary-color) !important;
+            }
           }
 
           /*noinspection CssInvalidFunction*/
           &:checked + .slider {
-            background-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
-            outline-color: light-dark(var(--natsumi-colors-primary), var(--natsumi-primary-color)) !important;
+            background-color: var(--natsumi-colors-primary) !important;
+            outline-color: var(--natsumi-colors-primary) !important;
+
+            @media (prefers-color-scheme: dark) {
+              background-color: var(--natsumi-primary-color) !important;
+              outline-color: var(--natsumi-primary-color) !important;
+            }
 
             &::before {
               background-color: white !important;
@@ -337,16 +375,24 @@
           backdrop-filter: blur(15px);
           filter: blur(0);
           transition: backdrop-filter 0.3s ease, filter 0.3s ease;
-          border: 1px solid light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
+          border: 1px solid rgba(20, 20, 20, 0.2) !important;
           box-shadow: 0 0 10px var(--natsumi-glass-shadow-color) !important;
           padding: 0 !important;
+
+          @media (prefers-color-scheme: dark) {
+            border: 1px solid rgba(235, 235, 235, 0.3) !important;
+          }
         }
 
         /*noinspection CssInvalidFunction*/
         .grey-line {
           width: calc(100% - 10px) !important;
           margin: 0 auto !important;
-          background-color: light-dark(rgba(20, 20, 20, 0.2), rgba(235, 235, 235, 0.3)) !important;
+          background-color: rgba(20, 20, 20, 0.2) !important;
+
+          @media (prefers-color-scheme: dark) {
+            background-color: rgba(235, 235, 235, 0.3) !important;
+          }
         }
 
         &.hide {
@@ -408,6 +454,7 @@
     }
   }
 }
+
 /* Rounded PiP */
 @media (-moz-bool-pref: "natsumi.experiments.rounded-pip") {
   @-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
@@ -418,18 +465,12 @@
   }
 }
 
-
-
-
-
 /* PIP Rounded */
+:root {
+  border-radius: 60px !important;
+  overflow: hidden !important;
+}
 
- :root {
-        border-radius: 60px !important;
-       overflow: hidden !important;
-    }
-
-    video {
-        border-radius: 60px !important;
-    }
+video {
+  border-radius: 60px !important;
 }

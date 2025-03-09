@@ -16,8 +16,20 @@
   src: url("./ACEmoji.ttf");
 }
 
+/* Define CSS variables for light and dark modes */
+:root {
+  --text-color: #000000; /* Default to black for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ffffff; /* White for dark mode */
+  }
+}
+
 * {
   font-family: "SF-Pro", Arial;
+  color: var(--text-color); /* Use the CSS variable for text color */
 }
 
 #zen-current-workspace-indicator #zen-current-workspace-indicator-icon {

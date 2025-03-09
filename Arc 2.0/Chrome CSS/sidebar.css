@@ -1,16 +1,33 @@
 /* Cleaned & Transparent Sidebar */
+
 #sidebar-box {
-  background-color: light-dark(
-    rgba(255, 255, 255, 0.11),
-    rgba(0, 0, 0, 0.2)
-  ) !important;
   border: none !important;
+}
 
-  & #sidebar-header {
+@media (prefers-color-scheme: light) {
+  #sidebar-box {
+    background-color: rgba(255, 255, 255, 0.11) !important;
+  }
+
+  #sidebar-box #sidebar-header {
     border-bottom: none !important;
+  }
 
-    & #sidebar-close {
-      display: none !important;
-    }
+  #sidebar-box #sidebar-header #sidebar-close {
+    display: none !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #sidebar-box {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  #sidebar-box #sidebar-header {
+    border-bottom: none !important;
+  }
+
+  #sidebar-box #sidebar-header #sidebar-close {
+    display: none !important;
   }
 }

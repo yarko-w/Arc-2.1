@@ -1,5 +1,21 @@
 /* ICON CHANGER */
 
+/* Define variables */
+:root {
+  --icon-brightness: 1; /* Default brightness value */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --icon-brightness: 0.2; /* Brightness value for light mode */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icon-brightness: 1; /* Brightness value for dark mode */
+  }
+}
 
 /* sets the expand sidebar svg */
 #zen-sidepanel-button {
@@ -22,15 +38,16 @@
 
 
 
-/* ARC ICON FOR MENUBUTTON */
+/* ZEN ICON FOR MENUBUTTON */
 
 #PanelUI-menu-button {
-  list-style-image: url('https://raw.githubusercontent.com/neurokitti/Arc_Zen_Theme/6da4c1ca78cc521bea1026ff024fcc8528ae6a49/icons/arc-logo.svg') !important;
+  list-style-image: url('https://raw.githubusercontent.com/zen-browser/branding/refs/heads/main/Official/Word Marks/SVG/zen_logo_icon_white.svg') !important;
+  filter: brightness(var(--icon-brightness)) !important;
 }
 
 
 
-/* sets the expand sidebar svg */
+/* sets the var(--icon-brightness)xpand sidebar svg */
 #zen-sidepanel-button {
   list-style-image: url("https://raw.githubusercontent.com/neurokitti/Arc_Zen_Theme/6da4c1ca78cc521bea1026ff024fcc8528ae6a49/icons/sidebar.svg") !important;
   scale: 1;

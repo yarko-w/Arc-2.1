@@ -1,8 +1,6 @@
 /* Colouring Essentials */
 
 #zen-essentials-container .tabbrowser-tab {
-  
- 
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
     &[visuallyselected] .tab-background {
       &::after {
@@ -10,23 +8,32 @@
         top: -50% !important;
         width: 200% !important;
         height: 200% !important;
-        filter: blur (20px) !important;
+        filter: blur(20px) !important;
       }
 
       &::before {
         mask-image: none !important;
-        background-color: light-dark(
-          color-mix(in srgb, #ffffff 65%, transparent),
-          color-mix(in srgb, #000000 55%, transparent)
-        ) !important;
       }
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    &[visuallyselected] .tab-background::before {
+      background-color: color-mix(in srgb, #ffffff 65%, transparent) !important;
     }
 
     &[visuallyselected]:hover .tab-background::before {
-      background-color: light-dark(
-        color-mix(in srgb, #ffffff 55%, transparent),
-        color-mix(in srgb, #000000 65%, transparent)
-      ) !important;
+      background-color: color-mix(in srgb, #ffffff 55%, transparent) !important;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    &[visuallyselected] .tab-background::before {
+      background-color: color-mix(in srgb, #000000 55%, transparent) !important;
+    }
+
+    &[visuallyselected]:hover .tab-background::before {
+      background-color: color-mix(in srgb, #000000 65%, transparent) !important;
     }
   }
 }
